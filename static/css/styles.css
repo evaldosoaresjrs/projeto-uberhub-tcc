@@ -1,0 +1,138 @@
+body {
+    margin: 0;
+    color: white;
+    font-family: "Poppins", Arial, sans-serif;
+    height: 100%;
+}
+
+.navBar {
+    background-color: #5000b7;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.logo {
+    margin-right: 20px;
+}
+
+.navItemsList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex: 1;
+}
+
+.navItem {
+    margin: 0 25px;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.navItem:hover {
+    text-decoration: underline;
+}
+
+.navAccountContainer {
+    margin-left: auto;
+    margin-right: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 15px;
+}
+
+.downArrow {
+    margin-left: 15px;
+    font-size: 25px;
+}
+
+.container {
+    margin-top: 60px; /* Ajusta a posição para não sobrepor a navbar */
+}
+
+.main-content {
+    padding: 20px;
+    background-color: white;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header h2 {
+    margin: 0;
+}
+
+.header .user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header .user-info img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.jobs-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.jobs-list li {
+    background-color: #f1f1f1;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.jobs-list li:hover {
+    background-color: #e0e0e0;
+}
+
+.job-title {
+    font-weight: bold;
+    color: #3f51b5;
+    text-decoration: none;
+}
+
+.job-details {
+    color: #666;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+.actions button {
+    background-color: #3f51b5;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.actions button:hover {
+    background-color: #32408f;
+}

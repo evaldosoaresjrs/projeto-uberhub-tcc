@@ -1,0 +1,73 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.4/font/bootstrap-icons.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+        <style>
+            body {
+                margin: 0;
+                color: white;
+                font-family: "Poppins";
+                height: 100%;
+            }
+            .navBar {
+                background-color: #5000b7;
+                display: flex;
+                align-items: center;
+                padding: 10px 0px;
+                width: 100%;
+            }
+            .logo {
+                margin: 0px 20px;
+            }
+            .navItemsList {
+                text-decoration: none;
+            }
+            .navItem {
+                margin: 0 25px;
+                font-size: 20px;
+            }
+            .navAccountContainer {
+                margin-left: auto;
+                margin-right: 25px;
+                display: flex;
+                justify-content: end;
+                align-items: center;
+                padding-right: 15px;
+            }
+            .downArrow {
+                margin-top: 6px;
+                margin-left: 15px;
+                font-size: 25px;
+            }
+            h2 {
+                font-weight: normal;
+            }
+            ul {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="navBar">
+            <img class="logo" src="https://app.uberhub.com.br/static/img/logouber_yhEkA61.png">
+            <ul class="navItemsList">
+                <li class="navItem">Home</li>
+                <li class="navItem">Vagas</li>
+                <li class="navItem">Startups</li>
+                <li class="navItem">Eventos</li>
+                <li class="navItem">Notícias</li>
+            </ul>
+            <div class="navAccountContainer">
+                <h2>Olá, Usuário</h2>
+                <i class="bi bi-caret-down-fill downArrow"></i>
+            </div>
+        </div>
+    </body>
+    </html>

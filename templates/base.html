@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Document{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.4/font/bootstrap-icons.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body>
+    <div class="navBar">
+        <img class="logo" src="https://app.uberhub.com.br/static/img/logouber_yhEkA61.png" alt="Logo">
+        <ul class="navItemsList">
+            <li class="navItem">Home</li>
+            <li class="navItem">Vagas</li>
+            <li class="navItem">Startups</li>
+            <li class="navItem">Eventos</li>
+            <li class="navItem">Notícias</li>
+        </ul>
+        <div class="navAccountContainer">
+            <h2>Olá, Usuário</h2>
+            <i class="bi bi-caret-down-fill downArrow"></i>
+        </div>
+    </div>
+    <div class="container mt-4">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+
+</html>

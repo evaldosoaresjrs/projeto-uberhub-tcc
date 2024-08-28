@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Adm/Vagas{% endblock %}
+
+{% block content %}
+    <div class="main-content">
+        <div class="header">
+            <h2>Vagas encontradas online</h2>
+            <div class="user-info">
+                <span>Olá, Usuário</span>
+                <img src="user-profile.jpg" alt="User Profile">
+            </div>
+        </div>
+        <ul class="jobs-list">
+            {% for vaga in vagas %}
+            <li>
+                <div>
+                    <a class="job-title">{{ vaga['nome_empresa'] }} - {{ vaga['cargo'] }}</a>
+                    <p class="job-details">{{ vaga['local'] }} | {{ vaga['tipo'] }}</p>
+                </div>
+                <div class="actions">
+                    <a href="{{ vaga['link'] }}" target="_blank">
+                        <button>Ver Detalhes</button>
+                    </a>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
