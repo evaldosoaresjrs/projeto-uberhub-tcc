@@ -2,6 +2,7 @@ from flask import Flask, render_template, jsonify
 import requests
 from bs4 import BeautifulSoup
 import json
+from urllib.parse import urljoin
 
 app = Flask(__name__)
 app.config['DEBUG'] = True
@@ -33,7 +34,10 @@ def scrape_gupy():
 
 
             for item in itens:
-                link = item.find('a', {'data-testid': 'job-list__listitem-href'})['href']
+                anchor = item.find('a', {'data-testid': 'job-list__listitem-href'})
+                if not anchor:
+                    continue
+                link = urljoin(url, anchor.get('href', ''))
                 divs = item.find_all('div')
 
                 if len(divs) >= 3:
@@ -47,7 +51,7 @@ def scrape_gupy():
                             'cargo': cargo_div,
                             'local': local_div,
                             'tipo': tipo_div,
-                            'link': f'{url}{link}',
+                            'link': link,
                             'nome_empresa': nome_empresa
                         }
                         vagas.append(vaga)
